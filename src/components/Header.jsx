@@ -1,0 +1,104 @@
+import { FiArrowDownRight } from "react-icons/fi";
+import ToggleButton from "./ToggleButton";
+
+const Header = () => {
+    const Links = <>
+        <ul className="menu menu-horizontal px-4 space-x-6 font-semibold lg:space-x-6">
+            <li>
+                <a href="#" className="relative hover:text-purple-400 group">
+                    Home
+                    <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#about" className="relative hover:text-purple-400 group">
+                    About
+                    <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#skills" className="relative hover:text-purple-400 group">
+                    Skills
+                    <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#project" className="relative hover:text-purple-400 group">
+                    Project
+                    <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#contact" className="relative hover:text-purple-400 group">
+                    Contact
+                    <span className="absolute left-0 bottom-0 h-1 bg-purple-400 w-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </li>
+        </ul>
+    </>
+
+    return (
+        <div>
+            <section
+                className="
+                fixed z-10 w-full transition-all
+                backdrop-blur-md bg-white/20 dark:bg-black/20
+                border-b border-white/30 dark:border-white/10
+                shadow-lg shadow-black/10
+                "
+            >
+                <div
+                    className="
+                    navbar 
+                    max-w-7xl mx-auto 
+                    "
+                >
+                    <div className="navbar-start">
+                        <div className="dropdown">
+                            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-5 w-5"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </div>
+
+                            {/* Mobile Menu */}
+                            <ul
+                                tabIndex={0}
+                                className="
+                                menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow
+                                dark:bg-[#2c2523] dark:text-white
+                                backdrop-blur-md bg-white/20 dark:bg-black/20 border border-white/20
+                                "
+                            >
+                                {Links}
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* Desktop Menu */}
+                    <div className="navbar-center hidden lg:flex">
+                        <ul className="menu menu-horizontal px-1">
+                            {Links}
+                        </ul>
+                    </div>
+
+                    {/* Right Side */}
+                    <div className="navbar-end">
+                        <ToggleButton />
+                    </div>
+                </div>
+            </section>
+        </div>
+    )
+}
+
+export default Header;

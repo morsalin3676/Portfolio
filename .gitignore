@@ -24,9 +24,3 @@ assets
 *.sw?
 
 .vercel
-components
-Bannar.jsx
-Contact.jsx
-Footer.jsx
-Project.jsx
-Skills.jsx
