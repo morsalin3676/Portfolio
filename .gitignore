@@ -25,10 +25,8 @@ assets
 
 .vercel
 components
-About.jsx
 Bannar.jsx
 Contact.jsx
 Footer.jsx
-Header.jsx
 Project.jsx
 Skills.jsx
